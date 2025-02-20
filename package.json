@@ -1,0 +1,52 @@
+{
+  "name": "dacn_nhom8",
+  "version": "1.0.0",
+  "description": "Đồ án chuyên ngành",
+  "main": "src/script.js",
+  "scripts": {
+    "beautiful": "lint-staged",
+    "start": "nodemon --inspect src/script.js",
+    "watch": "node-sass src/resources/scss/addItems.scss src/public/css/addItems.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenDinhThienBao/DACN_NHOM8.git"
+  },
+  "keywords": [
+    "erp",
+    "dacn",
+    "nhom8",
+    "web"
+  ],
+  "author": "nhom8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenDinhThienBao/DACN_NHOM8/issues"
+  },
+  "homepage": "https://github.com/NguyenDinhThienBao/DACN_NHOM8#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.30.1",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.3.4",
+    "mongoose-slug-generator": "^1.0.4",
+    "multer": "^1.4.5-lts.1",
+    "node-sass": "^9.0.0",
+    "slug": "^9.1.0"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
+}

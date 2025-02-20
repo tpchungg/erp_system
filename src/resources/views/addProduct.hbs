@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/manufacture.css">
+</head>
+  <!-- Chức năng tạo sản phẩm -->
+  <div class="create-product">
+    <h2>Tạo Sản Phẩm Mới</h2>
+    <form action="san-xuat/luu-san-pham" method="POST" enctype="multipart/form-data">
+      <label for="TenSP">Tên Sản Phẩm:</label>
+      <input type="text" id="TenSP" name="TenSP" required>
+      <label for="AnhSP">Ảnh Sản Phẩm:</label>
+      <input type="file" id="AnhSP" name="AnhSP" required>
+      <label for="SoLuongSP">Số Lượng:</label>
+      <input type="number" id="SoLuongSP" name="SoLuongSP" required>
+      <label for="GiaThanhSP">Giá Thành:</label>
+      <input type="number" id="GiaThanhSP" name="GiaThanhSP" required>
+      <button type="submit">Tạo Sản Phẩm</button>
+    </form>
+  </div>
+</div>

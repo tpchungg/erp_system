@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="/css/editEmployee.css">
+<body id="cap-nhat-thong-tin">
+<h1>CẬP NHẬT THÔNG TIN</h1>
+<form class="form-addEmployee" method="POST" action="/nhan-vien/{{employeeDetail._id}}?_method=PUT">
+    <!--Phần thứ 2: chỗ ảnh nhân viên-->
+    <section id="vung_thong_tin_1">
+          {{!-- Ảnh nhân viên --}}
+          <div class="form-div">
+            <label id="anh_nhan_vien" for="AnhNV" class="form-label"> <img src="/img/{{employeeDetail.AnhNV}}" alt="Ảnh nhân viên"/></label>
+            <input value="{{employeeDetail.AnhNV}}" name="AnhNV" type="file" class="form-control" id="AnhNV">
+          </div>
+          <!--Phần bên trái ảnh nhân viên --> 
+          <!--Mã nhân viên-->
+          <div class="thong_tin_ben_trai">
+            {{!-- Mã nhân viên --}}
+          <div class="form-div">
+              <input value="{{employeeDetail.MaNV}}" type="text" class="form-control ma_nhan_vien" id="MaNV">
+          </div>
+          <!--Họ và tên nhân viên-->
+          <div class="container-flex-column">
+              <label for="HovaTenNV" class="form-label">
+                  <p class="big-text">HỌ VÀ TÊN</p>
+                  <P class="small-text">(Full name)</P>
+              </label>
+              <div>
+                  <input value="{{employeeDetail.HovaTenNV}}" name="HovaTenNV" type="text" class="form-control ho_va_ten border-info" id="HovaTenNV" >
+              </div>
+          </div>
+          <!--Phần dưới học và tên-->
+          <div class="container-flex-row">
+              {{!-- <div class="container-flex-column">
+                  <label for="NgaySinhNV" class="form-label">
+                      <p class="big-text">NGÀY SINH</p>
+                      <p class="small-text">(Date of birth)</p>
+                  </label>
+                  <div>
+                      <input value="{{employeeDetail.NgaySinhNV}}" name="NgaySinhNV" type="date" class="form-control ngay_sinh border-info" id="NgaySinhNV">
+                  </div>
+              </div> --}}
+              <div class="container-flex-column flex-end">
+                  <label for="NoiSinhNV" class="form-label">
+                      <p class="big-text">NƠI SINH</p>
+                      <p class="small-text">(Place of birth)</p>
+                  </label>
+                  <div>
+                      <input value="{{employeeDetail.NoiSinh}}" name="NoiSinh" type="text" class="form-control noi_sinh border-info" id="NoiSinhNV ">
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
+    <!--Phần 3: Các thông tin khác-->
+    <section id="vung_thong_tin_2">
+      <!--Phần 3.1: Quốc tịch, dân tộc và tôn giáo-->
+      <div>
+          <div class="container-flex-column">
+              <label for="QuocTichNV" class="form-label">
+                  <p class="big-text">QUỐC TỊCH</p>
+                  <p class="small-text">(National)</p>
+              </label>
+              <div>
+                  <input value="{{employeeDetail.QuocTichNV}}" name="QuocTichNV" type="text" class="form-control quoc_tich border-info" id="QuocTichNV">
+              </div>
+          </div>
+          <div class="container-flex-column">
+              <label for="DanTocNV" class="form-label">
+                  <p class="big-text">DÂN TỘC</p>
+                  <p class="small-text">(Ethnic)</p>
+              </label>
+              <div>
+                  <input value="{{employeeDetail.DanTocNV}}" name="DanTocNV" type="text" class="form-control dan_toc border-info" id="DanTocNV">
+              </div>
+          </div>
+          <div class="container-flex-column">
+              <label for="TonGiaoNV" class="form-label">
+                  <p class="big-text">TÔN GIÁO</p>
+                  <p class="small-text">(Religion)</p>
+              </label>
+              <div>
+                  <input value="{{employeeDetail.TonGiaoNV}}" name="TonGiaoNV" type="text" class="form-control ton_giao border-info" id="TonGiaoNV">
+              </div>
+          </div>
+       </div>
+      <!--Phần 3.2: Vị trí, chuyên môn và loại-->
+      <div>
+        <div class="container-flex-column">
+              <label for="ChuyenMonLamViec" class="form-label">
+                  <p class="big-text">CHUYÊN MÔN</p>
+                  <p class="small-text">(Specialized)</p>
+              </label>
+              <div>
+                  <select name="ChuyenMonLamViec" type="text" class="form-control chuyen_mon border-info" id="ChuyenMonLamViec">
+                    <option value="{{employeeDetail.ChuyenMonLamViec}}">{{employeeDetail.ChuyenMonLamViec}}</option>
+                    <option value="Giám định sản phẩm">Giám định sản phẩm</option>
+                    <option value="Nhân Sự">Nhân Sự</option>
+                    <option value="IT">IT</option>
+                    <option value="marketing">Bán hàng</option>
+                    <option value="Sản Xuất">Sản Xuất</option> <!--Nhân viên/ Quản lý-->
+                  </select>
+              </div>
+         </div>
+          <div class="container-flex-column">
+               <label for="LoaiNV" class="form-label">
+                  <p class="big-text">VỊ TRÍ</p>
+                  <p class="small-text">(Position)</p>
+              </label>
+              <div>
+                  <select name="LoaiNV" class="form-control loai border-info" id="LoaiNV">
+                    <option value="{{employeeDetail.LoaiNV}}">{{employeeDetail.LoaiNV}}</option>
+                      <option value="Quản lí">Quản lí</option>
+                      <option value="Nhân viên">Nhân viên</option>
+                      <option value="Thực tập sinh">Thực tập sinh</option>
+                      <option value="Thử việc">Thử việc</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+      <!--Giới tính và tình trạng sức khỏe (theo thang điểm A,B,C)-->
+      <div>
+          <div class="container-flex-column">
+              <label for="GioiTinhNV" class="form-label">
+                  <p class="big-text">GIỚI TÍNH</p>
+                  <p class="small-text">(Gender)</p>
+              </label>
+              <div>
+                    <select name="GioiTinh" class="form-control gioi_tinh border-info" id="GioiTinhNV">
+                      <option value="{{employeeDetail.GioiTinh}}">{{employeeDetail.GioiTinh}}</option>
+                      <option value="Nam">Nam</option>
+                      <option value="Nữ">Nữ</option>
+                    </select>
+              </div>
+          </div>
+          <div class="container-flex-column">
+              <label for="TinhTrangSucKhoeNV" class="form-label">
+                  <p class="big-text">SỨC KHỎE</p>
+                  <p class="small-text">(Health status)</p>
+              </label>
+              <div>
+                 <input value={{employeeDetail.TinhTrangSucKhoe}} type="text" class="form-control tinh_trang_suc_khoe border-info" id="TinhTrangSucKhoeNV">
+              </div>
+          </div>
+      </div>
+  </section>
+            <span class="line"></span>
+            <!--Phần 4: Các thông tin liên hệ-->
+            <section id="vung_thong_tin_3">
+                <p class="title_thong_tin">Thông tin liên lạc (CONTACT)</p>
+                <div>
+                  <label for="SoDienThoaiNV" class="form-label">
+                    <p class="big-text">SỐ ĐIỆN THOẠI</p>
+                    <p class="small-text">(Phone number)</p>
+                  </label>
+                    <input value="{{employeeDetail.SoDienThoaiNV}}" name="SoDienThoaiNV" type="text" class="form-control so_dien_thoai border-info" id="TinhTrangSucKhoeNV">
+                </div>
+                <div>
+                   <label for="EmailNV" class="form-label">
+                    <p class="big-text">EMAIL</p>
+                    <p class="small-text">(Email)</p>
+                  </label>
+                    <input value="{{employeeDetail.EmailNV}}" name="EmailNV" type="email" class="form-control email border-info" id="EmailNV" >
+                </div>
+                <div>
+                  <label for="DiaChiNV" class="form-label">
+                    <p class="big-text">ĐỊA CHỈ</p>
+                    <p class="small-text">(Address)</p>
+                  </label>
+                    <input value="{{employeeDetail.DiaChiNV}}" name="DiaChiNV" type="text" class="form-control dia_chi border-info" id="DiaChiNV" >
+                </div>
+            </section>
+            <section class="position-relative">
+                  <button type="submit" class="btn btn-primary">Cập nhật</button>
+            </section>
+</form>
+</body>
+
+
+<script>
+    // Get a reference to our file input
+    const fileInput = document.querySelector('input[type="file"]');
+
+    // Create a new File object using {{employeeDetail.AnhNV}}
+    const myFile = new File([], '{{employeeDetail.AnhNV}}', {
+        type: 'image/jpeg', // Assuming it's a JPEG image
+        lastModified: new Date(),
+    });
+
+    // Now let's create a DataTransfer to get a FileList
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(myFile);
+    fileInput.files = dataTransfer.files;
+</script>

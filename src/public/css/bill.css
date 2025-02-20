@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/*nội dung chính - content*/
+#phieu-chi {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#back {
+  border-bottom: 2px solid black;
+  width: 100%; }
+
+#back > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  margin-left: 15px; }
+
+h1 {
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center; }
+
+label {
+  margin-right: 50px; }
+
+label > input {
+  margin-left: 10px; }
+
+#phieu-thu-tien {
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-top: 50px;
+  position: relative; }
+
+fieldset {
+  border: none; }
+
+.first-fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  height: 30px; }
+
+.second-fieldset {
+  display: inline-block;
+  margin-bottom: 20px; }
+
+.third-fieldset {
+  display: flex;
+  justify-content: space-around;
+  align-self: start;
+  margin-bottom: 20px; }
+
+.third-fieldset > label > input {
+  width: auto;
+  height: 20px; }
+
+.fourth-fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+
+.fourth-fieldset > label > input {
+  width: auto;
+  height: 20px; }
+
+/*BUTTON XÁC NHẬN*/
+#submit {
+  display: flex;
+  margin-left: auto;
+  background: #25b9b9;
+  padding: 8px;
+  color: white;
+  border: 1px solid #5c6565;
+  border-radius: 5px; }
+
+/*Phần chỉnh sửa chung*/
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+
+.position-relative {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.container-flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.bold-text {
+  font-size: 18px;
+  font-weight: 500;
+  width: auto;
+  color: #292828; }
+
+.big-text {
+  font-size: 20px;
+  font-weight: 500;
+  width: auto;
+  color: #292828;
+  border-top: 2px solid black;
+  margin-bottom: 20px;
+  padding-top: 5px; }
+
+.small-text {
+  font-size: 13px;
+  font-weight: 500;
+  justify-content: center;
+  color: #292828; }
+
+.border-info {
+  padding: 10px;
+  background: white;
+  border: 1px solid black;
+  font-size: large; }

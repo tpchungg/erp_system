@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/purchase.css">
+    </head>
+<div id="hang-hoa">
+    {{!-- Thông tin sản phẩm --}}
+    <section id="product-list" class="product-list">
+        {{#each purchase}}
+            <div class="product-item">
+                <img src="/img/{{this.AnhSP}}" alt="Product Image" class="product-image">
+                <div class="product-name">{{this.TenSP}}</div>
+                <div class="product-price">{{this.GiaThanhSPFormatted}}</div>
+                <a href="/mua-hang/{{this.TenSP}}" class="buy-button">Mua hàng</a>
+            </div>
+        {{/each}}
+    </section>
+</div>

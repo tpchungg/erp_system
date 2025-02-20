@@ -1,0 +1,189 @@
+#khach-hang {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+
+.line {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+/*===========Thanh tìm kiếm============*/
+#employee-search{
+    display: flex;
+    margin-bottom: 10px;
+    position: sticky; /*Hiển thị "employee-search" cố định khi cuộn trang*/
+    z-index: 2000; /* Đảm bảo hiển thị "employee-search" trên cùng */
+}
+/*Thanh tìm kiếm*/
+#search-box {
+background: white;
+border: 1px solid black;
+cursor: pointer;
+width: 300px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+margin-left: 10px;
+}
+/*text search*/
+#search-box #search-text{
+    
+    border: none;
+    outline: none;
+    background: none;
+    width: 85%;
+    padding: 10px 10px;
+}
+/*button search*/
+#search-box #search-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+/*Thêm, xóa khách hàng*/
+#adjust-employee{
+    position: absolute; /*Hiển thị nút "Thêm, xóa khách hàng" ở góc dưới bên phải*/
+    right: 0;
+    align-items: center;
+    cursor: pointer;
+    width: 90px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+#add-btn, #delete-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px; 
+}
+/*================BẢNG KHÁCH HÀNG======================*/
+
+
+/*===============CỘT KHÁCH HÀNG*===============*/
+.new-customer, .potential-customer, .vip-customer {
+    cursor: pointer;
+    width: calc(100% / 3);
+}
+
+.type-new-customer, .type-potential-customer, .type-vip-customer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow-color, .orange-color, .red-color{
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+}
+.background-item{
+    margin-top: 10px;
+    padding:10px 5px 5px 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+.yellow-color{
+    background: yellow;
+}
+
+.orange-color{
+    background: orange;
+}
+.email{
+    font-size: 15px;;
+    color: #aa9d9a;
+}
+.red-color{
+    background: red;
+}
+.khach-hang-email{
+    font-size: 15px;
+    color: #aa9d9a;
+    margin: 5px;
+}
+.space-around{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+.chi_tiet_khach_hang{
+    align-self: flex-end;
+}
+.btn_chuyen{
+        margin-left: 20px;
+        padding: 5px 5px;
+        background-color: #25b9b9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: flex-end;
+}
+/*=========CĂN CHỈNH BỐ CỤC=========*/
+.border-orange{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: orange;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
+
+.border-red{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: red;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
+.border-yellor{
+    border: 1px solid black;
+    width: calc(100%/1.5);
+    background: yellow;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 3px;
+}
+.container-flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container-flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.adjust-center{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.post-title {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+/*==============================================*/

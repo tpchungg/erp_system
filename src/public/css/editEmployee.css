@@ -1,0 +1,237 @@
+*{
+  font-family: 'Montserrat', sans-serif; 
+}
+#cap-nhat-thong-tin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  h1{
+    text-align: center;
+    background: #25b9b9;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: sticky;
+    top: 70px;
+    z-index: 1;
+    box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+  #vung_thong_tin_1, #vung_thong_tin_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ảnh và phần thông tin bên trái*/
+  #vung_thong_tin_1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  #anh_nhan_vien > img{
+    width: 250px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+  .thong_tin_ben_trai{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+  .ma_nhan_vien{
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .ho_va_ten{
+    margin-left: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+  
+  }
+  /*Phần ngày sinh và nơi sinh*/
+  .ngay_sinh, .noi_sinh{
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+  }
+  .ngay_sinh{ 
+    margin-right: 200px;
+  }
+  /*Phần thâm niên và thời gian bắt đầu*/
+  .tham_nien, .thoi_gian_bat_dau{
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+  }
+  .tham_nien{
+    margin-right: 200px;
+  
+  }
+  /*Phần thông tin dưới ảnh*/
+  #vung_thong_tin_2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+  .quoc_tich, .dan_toc, .ton_giao {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+    margin-right: 150px;
+  }
+  .quoc_tich{
+    margin-left: 30px;
+  }
+  .dan_toc{
+    margin-left: 50px;
+  
+  }
+  .ton_giao{
+    margin-left: 40.5px;
+  }
+  
+  .vi_tri, .chuyen_mon, .loai{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+    margin-right: 150px;
+  }
+  .vi_tri{
+    margin-left: 50px;
+  }
+  .chuyen_mon{
+    margin-left: 30px;
+  
+  }
+  .loai{
+    margin-left: 50px;
+  }
+  .gioi_tinh, .tinh_trang_suc_khoe{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    width: 100px;
+  }
+  .gioi_tinh{
+    margin-left: 30px;
+  }
+  .tinh_trang_suc_khoe{
+    margin-left: 22px;
+  
+  }
+  /*Phần thông tin liên hệ*/
+  #vung_thong_tin_3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+  .title_thong_tin{
+    margin-bottom:15px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+  
+  }
+  /*Phần line*/
+  .line{
+    border-bottom: 2px solid black;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  /*Button cập nhật*/
+  .btn_cap_nhat{
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #25b9b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn_cap_nhat:hover {
+    background-color: #0c7d7d;
+  }
+  /*Phần chỉnh sửa chung*/
+  .container-flex-column{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  
+  }
+  .position-relative{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .container-flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+  .big-text{
+    font-size: 20px;
+    font-weight: 500;
+    width: auto;
+    color: #292828;
+  }
+  .small-text{
+    font-size: 13px;
+    font-weight: 500;
+    color: #292828;
+  }
+  .border-info{
+    padding: 10px;
+    font-size: large;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    background: #efeeee;
+  }

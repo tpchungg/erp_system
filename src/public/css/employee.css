@@ -1,0 +1,177 @@
+#nhan-su{
+    position: relative; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+    display: flex;
+    flex-direction: row; /*Hiển thị theo cột*/ 
+}
+#employee-search{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background: #efeeee;
+    margin-top: -10px;
+    position: sticky;
+    top: 70px;
+    z-index: 1;
+}
+/*Thanh tìm kiếm*/
+#search-box {
+  visibility: hidden;
+background: white;
+cursor: pointer;
+width: 400px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+margin-left: 10px;
+margin-bottom: 10px;
+box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+/*text search*/
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    width: 85%;
+    padding: 10px 10px;
+}
+/*button search*/
+#search-box #search-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+/*Bộ lọc nhân viên*/
+.employee-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .employee-filter label,
+  .employee-filter select,
+  .employee-filter input,
+  .employee-filter button {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+.employee-filter select,
+.employee-filter input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.employee-filter select:focus,
+.employee-filter input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+  .employee-filter button {
+    background-color: #25b9b9;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .employee-filter button:hover {
+    background-color: #099090;
+  }
+  
+/*Thêm, xóa nhân viên*/
+#add-employee{
+    position: absolute; /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+    right: 0;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px; 
+}
+#add-employee, #delete-employee{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+/*Danh sách nhân viên*/
+.employee-card {
+    display: flex;
+    flex-wrap: wrap;  /*Hiển thị dạng lưới, xuống dòng khi tràn*/
+    flex-direction: row; /*Hiển thị theo hàng ngang*/
+    flex: 3 1 auto;
+}
+.employee-info{
+    display: flex;
+    position: relative; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+    width: 30%;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1); 
+}
+.employee-img{
+    width:30%;
+    height: 100%;
+    border-radius: 10px;
+    border-right: 1px solid none;
+}
+
+.employee-card-body{
+    position: relative;
+    margin: 10px;
+    width: 60%;
+}
+#chi_tiet_nhan_vien{
+    position: absolute; /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.ho_ten_nhan_vien{
+    font-size: 20px;
+    text-transform: uppercase; /*viết hoa*/
+    font-weight: bold;
+}
+.chuc_vu_nhan_vien{
+    width: auto;
+    height: auto;
+    border: 1px solid none;
+    text-transform: uppercase; /*viết hoa*/
+}
+.email_nhan_vien, .so_dien_thoai_nhan_vien{
+    margin: 5px;
+    font-size: 11px;
+    color: #808080;
+}
+/* Định dạng chung cho các link */
+.add-employee, .delete-employee, .chi-tiet-nhan-vien {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Định dạng khi để chuột vào link */
+.add-employee:hover, .delete-employee:hover,  .chi-tiet-nhan-vien:hover  {
+    color: red;
+  }
+  
+

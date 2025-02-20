@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/employeeDetail.css">
+    </head>
+    <body id="chi_tiet_nhan_vien">
+        <!--Hiển thị chính-->
+            <!--Nút quay lại trên cùng-->
+            <section id="quay_lai">
+                <a href="/nhan-vien">
+                    <i class="fa-solid fa-house-user"></i>
+                </a>
+            </section>
+            <!--Phần thứ 2: chỗ ảnh nhân viên-->
+            <section id="vung_thong_tin_1">
+                <!--Ảnh nhân viện --> 
+                <div id="anh_nhan_vien">
+                    <img src="/img/{{employeeDetail.AnhNV}}" alt="Ảnh nhân viên"/>
+                </div> 
+                <!--Phần bên trái ảnh nhân viên --> 
+                <!--Mã nhân viên-->
+                <div class="thong_tin_ben_trai">
+                    <div>
+                        <p class="ma_nhan_vien">{{employeeDetail.MaNV}}</p>
+                    </div>
+                    <!--Họ và tên nhân viên-->
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">HỌ VÀ TÊN</p>
+                            <P class="small-text">(Full name)</P>
+                        </div>
+                        <div>
+                        <p class="ho_va_ten border-info" >{{employeeDetail.HovaTenNV}}</p>
+                        </div>
+                    </div>
+                    <!--Phần dưới học và tên-->
+                    <div class="container-flex-row">
+                        <div class="container-flex-column">
+                            <div>
+                                <p class="big-text">NGÀY SINH</p>
+                                <p class="small-text">(Date of birth)</p>
+                            </div>
+                            <div>
+                                <p class="ngay_sinh border-info">{{employeeDetail.NgaySinhNVFormatted}}</p>
+                            </div>
+                        </div>
+                        <div class="container-flex-column flex-end">
+                            <div>
+                                <p class="big-text">NƠI SINH</p>
+                                <p class="small-text">(Place of birth)</p>
+                            </div>
+                            <div>
+                                <p class="noi_sinh border-info">{{employeeDetail.NoiSinh}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Phần dưới ngày sinh và nơi sinh-->
+                    <!--Thâm niên và thời gian bắt đầu-->
+                    <div class="container-flex-row ">
+                        <div class="container-flex-column">
+                            <div>
+                                <p class="big-text">THÂM NIÊN</p>
+                                <p class="small-text">(Seniority)</p>
+                            </div>
+                            <div>
+                                <p class="tham_nien border-info">{{employeeDetail.ThamNienLamViec}}</p>
+                            </div>
+                        </div>
+                        <div class="container-flex-column flex-end">
+                            <div>
+                                <p class="big-text">BẮT ĐẦU</p>
+                                <p class="small-text">(Start date)</p>
+                            </div>
+                            <div>
+                                <p class="thoi_gian_bat_dau border-info">{{employeeDetail.ThoiGianBatDauFormatted}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Phần 3: Các thông tin khác-->
+            <section id="vung_thong_tin_2">
+                <!--Phần 3.1: Quốc tịch, dân tộc và tôn giáo-->
+                <div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">QUỐC TỊCH</p>
+                            <p class="small-text">(National)</p>
+                        </div>
+                        <div>
+                            <p class="quoc_tich border-info">{{employeeDetail.QuocTichNV}}</p>
+                        </div>
+                    </div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">DÂN TỘC</p>
+                            <p class="small-text">(Ethnic)</p>
+                        </div>
+                        <div>
+                            <p class="dan_toc border-info">{{employeeDetail.DanTocNV}}</p>
+                        </div>
+                    </div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">TÔN GIÁO</p>
+                            <p class="small-text">(Religion)</p>
+                        </div>
+                        <div>
+                            <p class="ton_giao border-info">{{employeeDetail.TonGiaoNV}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Phần 3.2: Vị trí, chuyên môn và loại-->
+                <div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">CHUYÊN MÔN</p>
+                            <p class="small-text">(Specialized)</p>
+                        </div>
+                        <div>
+                            <p class="chuyen_mon border-info">{{employeeDetail.ChuyenMonLamViec}}</p>
+                        </div>
+                    </div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">VỊ TRÍ</p>
+                            <p class="small-text">(Position)</p>
+                        </div>
+                        <div>
+                            <p class="loai border-info">{{employeeDetail.LoaiNV}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Giới tính và tình trạng sức khỏe (theo thang điểm A,B,C)-->
+                <div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">GIỚI TÍNH</p>
+                            <p class="small-text">(Gender)</p>
+                        </div>
+                        <div>
+                            <p class="gioi_tinh border-info">{{employeeDetail.GioiTinh}}</p>
+                        </div>
+                    </div>
+                    <div class="container-flex-column">
+                        <div>
+                            <p class="big-text">SỨC KHỎE</p>
+                            <p class="small-text">(Health status)</p>
+                        </div>
+                        <div>
+                            <p class="tinh_trang_suc_khoe border-info">{{employeeDetail.TinhTrangSucKhoe}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <span class="line"></span>
+            <!--Phần 4: Các thông tin liên hệ-->
+            <section id="vung_thong_tin_3">
+                <p class="title_thong_tin">Thông tin liên lạc (CONTACT)</p>
+                <div>
+                    <p class="big-text">SỐ ĐIỆN THOẠI</p>
+                    <p class="small-text">(Phone number)</p>
+                    <p class="so_dien_thoai border-info">{{employeeDetail.SoDienThoaiNV}}</p>
+                </div>
+                <div>
+                    <p class="big-text">EMAIL</p>
+                    <p class="small-text">(Email)</p>
+                    <p class="email border-info">{{employeeDetail.EmailNV}}</p>
+                </div>
+                <div>
+                    <p class="big-text">ĐỊA CHỈ</p>
+                    <p class="small-text">(Address)</p>
+                    <p class="dia_chi border-info">{{employeeDetail.DiaChiNV}}</p>
+                </div>
+            </section>
+            <span class="line"></span>
+            <!--Phần 5: nút cập nhật thông tin-->
+            <section class="position-relative">
+                <a class="btn_cap_nhat" href="/nhan-vien/{{employeeDetail._id}}/edit">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Cập nhật thông tin</span>
+                </a>
+            </section>
+    </body>
+</html>

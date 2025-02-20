@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/*nội dung chính - content*/
+.custom-link {
+  text-decoration: none;
+  color: #000;
+  margin: -5px 30px 5px 5px; }
+
+.line {
+  border: 1px solid #000;
+  width: 100%; }
+
+/*=============VẼ BIỂU ĐỒ============*/
+/*=================PHIẾU THU====================*/
+.phieuthu {
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #000;
+  border-radius: 10px;
+  padding: 30px 40px; }
+
+h2 {
+  font-size: 25px;
+  text-align: center; }
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  background: #a3a1a1; }
+
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.container-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.adjust-center {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.big-text {
+  font-size: 18px;
+  font-weight: bold; }

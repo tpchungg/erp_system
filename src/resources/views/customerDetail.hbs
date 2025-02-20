@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin khách hàng</title>
+    <link rel="stylesheet" href="/css/customerDetail.css">
+</head>
+<body>
+    <div id="customer-info-container">
+        <div class="customer-info-section">
+            <h2>Thông tin khách hàng</h2>
+            <div class="customer-info-item">
+                <span class="label">Tên khách hàng:</span>
+                <span class="value">{{customerDetail.HoKH}} {{customerDetail.TenKH}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Số điện thoại:</span>
+                <span class="value">{{customerDetail.SoDienThoaiKH}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Tổng tiền tiêu thụ:</span>
+                <span class="value">{{customerDetail.SoTienTieuThuFormatted}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Số sản phẩm tiêu thụ:</span>
+                <span class="value">{{customerDetail.SoSanPhamTieuThu}}</span>
+            </div>
+            <div class="customer-info-item">
+                <span class="label">Địa chỉ:</span>
+                <span class="value">{{customerDetail.DiaChiLienLac}}</span>
+            </div>
+        </div>
+        <div class="transaction-history-section">
+            <h2>Lịch sử giao dịch</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thời gian</th>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each transactions}}
+                    <tr>
+                        <td>{{this.ThoiGianGiaoDichFormatted}}</td>
+                        <td>{{this.TenSPGiaoDich}}</td>
+                        <td>{{this.SoLuongSPGiaoDich}}</td>
+                        <td>{{this.TongGiaThanhGiaoDichFormatted}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

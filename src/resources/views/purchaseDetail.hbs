@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/purchaseDetail.css">
+ <!--Nội dung content-->
+<form id="tao-hoa-don" action="/mua-hang/xuat-hoa-don" method="POST">
+    <!-- Thông tin người mua hàng -->
+    <section class="start-info">
+        <div class="mb-3">
+            <label for="MaDonHang" class="form-label">Mã Đơn Hàng</label>
+            <input name="MaDonHang" type="text" class="MaDonHang-input" id="MaDonHang" readonly>
+        </div>
+    </section>
+    <section class="middle-info">
+        <nav class="left-side">
+            <div class="mb-3">
+                <label for="TenKH" class="form-label">Tên Khách Hàng</label>
+                <input name="TenKH" type="text" class="form-control" id="TenKH">
+            </div>
+            <div class="mb-3">
+                <label for="DiaChiKH" class="form-label">Địa chỉ</label>
+                <input name="DiaChiKH" type="text" class="form-control" id="DiaChiKH">
+            </div>
+            <div class="mb-3">
+                <label for="SoDienThoaiKH" class="form-label">Số điện thoại liên lạc</label>
+                <input name="SoDienThoaiKH" type="text" class="form-control" id="SoDienThoaiKH">
+            </div>
+        </nav>
+        <nav class="right-side">
+            <div>
+                <div>
+                    <label for="TenSP" class="form-label">Sản phẩm</label>
+                    <input name="TenSP" type="text" class="form-control" id="TenSP" value="{{purchaseDetail.TenSP}}" readonly>
+                </div>
+                <div>
+                    <label for="SoLuongSP" class="form-label">Số lượng</label>
+                    <input type="number" class="form-control" value="1" min="1" name="SoLuongSP" id="SoLuongSP"> 
+                </div>
+            </div>
+            <div>
+                <label for="ThoiGianGiaoDich" class="form-label">Thời gian</label>
+                <input name="ThoiGianGiaoDichFormatted" id="current-time" class="form-control" type="text" readonly></input>
+            </div>
+            <div>
+                <label class="form-label">Giá</label>
+                <p>{{purchaseDetail.GiaThanhSPFormatted}}</p>
+                <p class="priceProduct">{{purchaseDetail.GiaThanhSP}}</p>
+            </div>
+        </nav>
+    </section>
+    <section class="price-info">
+        <div class="price-info-wrapper">
+            <div class="price-details">
+                <div class="mb-3">
+                    <label for="GiaSPChuaThue" class="form-label">Giá Sản Phẩm</label>
+                    <input name="GiaSPChuaThue" type="text" id="GiaSPChuaThue" readonly>
+                </div>
+               <div class="mb-3">
+                    <label for="ThueSP" class="form-label">Thuế (10%)</label>
+                    <input name="ThueSP" type="text" id="ThueSP" readonly>
+                </div>
+                <div class="line"></div>
+               <div class="mb-3">
+                    <label for="GiaThanhSP" class="form-label">Tổng</label>
+                    <input name="GiaThanhSP" type="text" id="GiaThanhSP" readonly>
+                </div>
+                <input class="TongGiaThanhSP" id="TongGiaThanhSP" name="TongGiaThanhSP" type="number" readonly></input>
+            </div>
+        </div>
+    </section>
+    <button type="submit">Xác nhận</button>
+</form>
+ <script src="/js/purchase.js"></script>

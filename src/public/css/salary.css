@@ -1,0 +1,147 @@
+@charset "UTF-8";
+#nhan-su {
+  position: relative;
+  /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+  display: flex;
+  flex-direction: column;
+  /*Hiển thị theo cột*/ }
+
+#employee-search {
+  display: flex;
+  position: sticky;
+  /*Hiển thị "employee-search" cố định khi cuộn trang*/
+  z-index: 2000;
+  /* Đảm bảo hiển thị "employee-search" trên cùng */ }
+
+/*Thanh tìm kiếm*/
+#search-box {
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; }
+
+/*text search*/
+#search-box #search-text {
+  border: none;
+  outline: none;
+  background: none;
+  width: 85%;
+  padding: 10px 10px; }
+
+/*button search*/
+#search-box #search-btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px; }
+
+/*Bộ lọc nhân viên*/
+#employee-filter {
+  background: white;
+  border: 1px solid black;
+  margin-left: 5px;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+  margin-right: 10px;
+  flex-direction: row; }
+
+.filter-item {
+  display: inline;
+  margin-bottom: 10px; }
+
+.filter-item select {
+  background: none;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid black;
+  outline: none;
+  margin-left: 5px;
+  border-radius: 20px;
+  justify-content: center; }
+
+/*Thêm, xóa nhân viên*/
+#adjust-employee {
+  position: absolute;
+  /*Hiển thị nút "Thêm, xóa nhân viên" ở góc dưới bên phải*/
+  right: 0;
+  align-items: center;
+  cursor: pointer;
+  width: 90px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px; }
+
+#add-btn, #delete-btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px; }
+
+/*Danh sách nhân viên*/
+.employee-card {
+  display: flex;
+  flex-wrap: wrap;
+  /*Hiển thị dạng lưới, xuống dòng khi tràn*/
+  flex-direction: row;
+  /*Hiển thị theo hàng ngang*/
+  flex: 3 1 auto; }
+
+.employee-info {
+  display: flex;
+  position: relative;
+  /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+  width: 30%;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-left: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  justify-content: center;
+  /*Căn giữa*/ }
+
+.employee-img {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 10px;
+  border-right: 1px solid black; }
+
+.employee-card-body {
+  position: relative;
+  margin: 10px; }
+
+#chi_tiet_nhan_vien {
+  position: absolute;
+  /*Hiển thị nút "chi tiết" ở góc dưới bên phải*/
+  right: 0;
+  bottom: 0;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 10px 10px;
+  cursor: pointer; }
+
+.ho_ten_nhan_vien {
+  font-size: 20px;
+  text-transform: uppercase;
+  /*viết hoa*/
+  font-weight: bold;
+  margin-bottom: 5px; }
+
+.chuc_vu_nhan_vien {
+  background-color: #25b9b9;
+  padding: 5px;
+  text-transform: uppercase;
+  /*viết hoa*/ }
+
+.email_nhan_vien, .so_dien_thoai_nhan_vien {
+  margin: 5px;
+  font-size: 11px;
+  color: #808080; }

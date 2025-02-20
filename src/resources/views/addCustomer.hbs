@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/addCustomer.css">
+    </head>
+    <body>
+        <form class="form-addCustomer" method="POST" action="/khach-hang/luu-khach-hang">
+            <!--Mã khách hàng-->
+            <div class="form-div">
+                <label for="MaKH" class="form-label">Mã khách hàng</label>
+                <input name="MaKH" type="text" class="form-control" id="MaKH" required>
+            </div>
+
+            <!--Họ khách hàng-->
+            <div class="form-div">
+                <label for="HoKH" class="form-label">Họ khách hàng</label>
+                <input name="HoKH" type="text" class="form-control" id="HoKH" required>
+            </div>
+
+            <!--Tên khách hàng-->
+            <div class="form-div">
+                <label for="TenKH" class="form-label">Tên khách hàng</label>
+                <input name="TenKH" type="text" class="form-control" id="TenKH" required>
+            </div>
+
+            <!--Email Khách hàng-->
+            <div class="form-div">
+                <label for="EmailLienLac" class="form-label">Email khách hàng</label>
+                <input name="EmailLienLac" type="email" class="form-control" id="EmailLienLac" required>
+            </div>
+
+            <!--Địa chỉ khách hàng-->
+            <div class="form-div">
+                <label for="DiaChiLienLac" class="form-label">Địa chỉ khách hàng</label>
+                <input name="DiaChiLienLac" type="text" class="form-control" id="DiaChiLienLac" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm khách hàng</button>
+        </form>
+    </body>
+</html>

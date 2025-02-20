@@ -1,0 +1,60 @@
+/*chạy npm run watch để chạy*/
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; 
+}
+html {
+  scroll-behavior: smooth; }
+.position-relative{
+  position: relative;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column; 
+}
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #25b9b9;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  margin-bottom: 18px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+
+ }
+.logo-content img {
+  width: 70px;
+  height: auto; 
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 20px;
+  width: 150px;
+  height: auto; 
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600; 
+}
+
+.list-item a.active {
+  background: #e25037;
+  color: #fff;
+
+}
+
+.list-item a:hover:not(.active) {
+  background: #e25037;
+  border: 1px solid #aa9d9a;
+  padding: 8px;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+

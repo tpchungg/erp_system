@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/manufacture.css">
+</head>
+  <div class="neo-link-section">
+    <a href="#product-list" class="link-section">Danh sách</a>
+    <a href="#order-status-container" class="link-section">Xác nhận</a>
+    <a href="#create-product" class="link-section">Tạo sản phẩm</a>
+</div>
+<main id="kho-hang">
+  <div class="warehouse-container">
+  <!-- Chức năng hiển thị sản phẩm -->
+  <div id="product-list" class="product-list">
+    {{#each manufacture}}
+    <div class="product-item">
+      <img src="/img/{{this.AnhSP}}" alt="{{this.TenSP}}">
+      <h3>{{this.TenSP}}</h3>
+      <p>Số lượng: {{this.SoLuongSP}}</p>
+      <p>Đơn giá: {{this.GiaThanhSPFormatted}}</p>
+    </div>
+    {{/each}}
+  </div>
+
+  <!-- Chức năng xác nhận đơn hàng -->
+<div id= "order-status-container" class="order-status-container">
+  <div class="order-status-item pending">
+    <div class="order-status-title">Đang Chờ Xác Nhận</div>
+    {{#each billWait}}
+    <form class="order-details-list"  method="POST" action="/san-xuat/{{this.MaDonHang}}?_method=PUT">
+      <div class="order-details-item">
+        <label for="MaDonHang" class="order-details-item-label">Mã Đơn Hàng</label>
+        <input class="order-details-item-value" name="MaDonHang" id="MaDonHang" value="{{this.MaDonHang}}" readonly></input>
+      </div>
+      <div class="order-details-item">
+        <label class="order-details-item-label">Số lượng</label>
+        <input class="order-details-item-value" name="SoLuongSP" id="soLuongSP" value="{{this.SoLuongSP}}" readonly></input>
+      </div>
+      <div class="order-details-item">
+        <label for="TenSP" class="order-details-item-label">Tên Sản Phẩm</label>
+        <input class="order-details-item-value" name="TenSP" id="TenSP" value="{{this.TenSP}}" readonly></input>
+      </div>
+      <div class="order-details-item">
+        <label for="SoDienThoaiGiaoDich" class="order-details-item-label">Số Điện Thoại Giao Dịch</label>
+        <input class="order-details-item-value" name="SoDienThoaiGiaoDich" id="SoDienThoaiGiaoDich" value="{{this.SoDienThoaiGiaoDich}}" readonly></input>
+      </div>
+      <button type="submit" class="order-details-submit-btn">Xác nhận</button>
+    </form>
+    {{/each}}
+  </div>
+  <div class="order-status-item confirmed">
+    <div class="order-status-title">Đã xác nhận</div>
+    {{#each billConfirmed}}
+    <div class="order-details-list">
+      <div class="order-details-item">
+        <div class="order-details-item-label">Mã Đơn Hàng</div>
+        <div class="order-details-item-value">{{this.MaDonHang}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số lượng</div>
+        <div class="order-details-item-value">{{this.SoLuongSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Tên Sản Phẩm</div>
+        <div class="order-details-item-value">{{this.TenSP}}</div>
+      </div>
+      <div class="order-details-item">
+        <div class="order-details-item-label">Số Điện Thoại Giao Dịch</div>
+        <div class="order-details-item-value">{{this.SoDienThoaiGiaoDich}}</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+  <!-- Chức năng tạo sản phẩm -->
+  <div id="create-product" class="create-product">
+    <h2>Tạo Sản Phẩm Mới</h2>
+    <form action="san-xuat/them-hang-hoa" method="POST" enctype="multipart/form-data">
+      <label for="TenSP">Tên Sản Phẩm:</label>
+      <input type="text" id="TenSP" name="TenSP" required>
+      <label for="AnhSP">Ảnh Sản Phẩm:</label>
+      <input type="file" id="AnhSP" name="AnhSP" required>
+      <label for="SoLuongSP">Số Lượng:</label>
+      <input type="number" id="SoLuongSP" name="SoLuongSP" required>
+      <label for="GiaThanhSP">Giá Thành:</label>
+      <input type="number" id="GiaThanhSP" name="GiaThanhSP" required>
+      <button type="submit">Tạo Sản Phẩm</button>
+    </form>
+  </div>
+</div>
+</main>

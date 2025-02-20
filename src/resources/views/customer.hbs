@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/customer.css">
+</head>
+<body>
+    <div class="customer-group">
+        <h2>Khách Hàng Mới</h2>
+        {{#each newCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH">Xem thông tin</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="customer-group">
+        <h2>Khách Hàng Tiềm Năng</h2>
+        {{#each pontentialCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{this.SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH">Xem thông tin</a>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="customer-group">
+        <h2>Khách Hàng VIP</h2>
+        {{#each VIPCustomers}}
+        <div class="customer-info">
+            <div>{{this.TenKH}}</div>
+            <div>Số Điện Thoại: {{this.SoDienThoaiKH}}</div>
+            <div>Số Tiền: {{this.SoTienTieuThuFormatted}}</div>
+            <div>Số Lượng Sản Phẩm: {{this.SoSanPhamTieuThu}}</div>
+            <div>
+                <a href="khach-hang/{{this.TenKH}}" class="link-thong-tin-KH"> Xem thông tin</a>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+</body>
+</html>

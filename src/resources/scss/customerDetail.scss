@@ -1,0 +1,144 @@
+/*===============================*/
+/*Nội dung trang*/
+#thong_tin_khach_hang {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.line {
+    border-bottom: 2px solid rgb(116, 115, 115);
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.items-khachhang{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+}
+.margin-right{
+    margin-right: 100px;
+}
+.margin-right-dia-chi{
+    margin-right: 85px;
+
+}
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+.align-center{
+    align-items: center;
+}
+#btn-back{
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.history{
+    margin-top: 20px;
+}
+table {
+    width: 60%;
+}
+
+table, td, th {
+    border-bottom:1px solid #000;
+    border-collapse:collapse; /*hợp nhất border thành 1 đường kẻ*/
+}
+
+td, th {
+    padding: 6px 10px;
+    text-align: center;
+}
+.big-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.container-flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container-flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.position-relative{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.space-around{
+    justify-content: space-around;
+
+}
+.adjust-center{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.chart {
+    margin-top: 50px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .line-chart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .line-chart span {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    background-color: steelblue;
+    transition: height 0.5s;
+  }
+  
+  .line-chart span:nth-child(1) {
+    left: 0;
+  }
+  
+  .line-chart span:nth-child(2) {
+    left: 25%;
+  }
+  
+  .line-chart span:nth-child(3) {
+    left: 50%;
+  }
+  
+  .line-chart span:nth-child(4) {
+    left: 75%;
+  }
+
+  /*Button cập nhật*/
+.btn_cap_nhat{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #25b9b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

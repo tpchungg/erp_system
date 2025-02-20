@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/salary.css">
+    </head>
+    <body>
+    <!--Hiển thị chính-->
+        <main id="nhan-su">
+            <!--Thanh tìm kiếm-->
+            <section id="employee-search">
+                <div id ="search-box">
+                    <form action ="">
+                        <input type="text" placeholder="Tìm kiếm..." id="search-text" required>
+                        <button type="submit" id="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+                <!--Bộ lọc-->
+                <div id = "employee-filter">
+                    <div class="filter">
+                        <!--Lọc theo chức vụ-->
+                        <div class="filter-item">
+                            <label for="chuc-vu">Chức vụ</label>
+                            <select name="chuc-vu" id="chuc-vu">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="giam-doc">Giám đốc</option>
+                                <option value="truong-phong">Trưởng phòng</option>
+                                <option value="nhan-vien">Nhân viên</option>
+                            </select>
+                        </div>
+                        <!--Lọc theo phòng ban-->
+                        <div class="filter-item">
+                            <label for="phong-ban">Phòng ban</label>
+                            <select name="phong-ban" id="phong-ban">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="kinh-doanh">Kinh doanh</option>
+                                <option value="san-xuat">Sản xuất</option>
+                                <option value="ke-toan">Kế toán</option>
+                            </select>
+                        </div>
+                        <!--Lọc theo giới tính-->
+                        <div class="filter-item">
+                            <label for="gioi-tinh">Giới tính</label>
+                            <select name="gioi-tinh" id="gioi-tinh">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="nam">Nam</option>
+                                <option value="nu">Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--Thông tin nhân sự-->
+            <section class="employee-card">
+                {{#each employee}}
+                <div class="employee-info">
+                    <img src="{{this.AnhNV}}" alt="Ảnh nhân viên" class="employee-img">
+                    <div class="employee-card-body">
+                        <div class="ho_ten_nhan_vien"><p><strong>{{this.HoNV}} {{this.TenNV}}</strong></p></div>
+                        <div class="chuc_vu_nhan_vien"><p>{{this.ViTriLamViec}}</p></div>
+                        <div class="email_nhan_vien"><p>{{this.EmailNV}}</p></div>
+                        <div class="so_dien_thoai_nhan_vien"><p>{{this.SoDienThoaiNV}}</p></div>
+                    </div>
+                    <div id="chi_tiet_nhan_vien">
+                        <a href="/nhan-vien/{{this.MaNV}}"><i class="fa-solid fa-address-card"></i></a>
+                    </div>
+                </div>
+                {{/each}}
+            </section>
+        </main>
+    </body>
+</html> 

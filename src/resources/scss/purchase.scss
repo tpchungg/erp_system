@@ -1,0 +1,144 @@
+/*nội dung chính - content*/
+#hang-hoa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*button Hóa đơn*/
+.btn_hoa_don {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    width:auto;
+    background-color: #25b9b9;
+    color: white;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#tensp {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sanpham {
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: .4s;
+    background:#fff;
+}
+
+.sanpham:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+}
+
+img {
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+p {
+    text-align: center;
+    color:#b2bec3;
+    padding-top: 0 8px;
+}
+
+h5 {
+    font-size: 26px;
+    text-align: center;
+    color: #c64343;
+    margin: 0;
+}
+
+button {
+    text-align: center;
+    font-size: 24px;
+    color:#fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buy {
+    background: #004aad;
+    font-weight: 600;
+}
+
+@media(max-width:1000px){
+    .sanpham{
+        width: 45%;
+    }
+}
+
+@media(max-width:750px){
+    .sanpham{
+        width: 100%;
+    }
+}
+
+
+
+
+/*Phần chỉnh sửa chung*/
+.container-flex-column{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+.position-relative{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.big-text{
+    font-size: 20px;
+    font-weight: 500;
+    width: auto;
+    color: #292828;
+}
+.small-text{
+    font-size: 13px;
+    font-weight: 500;
+    justify-content: center;
+    color: #292828;
+}
+.border-info{
+    padding: 10px;
+    background: white;
+    border: 1px solid black;
+    font-size: large;
+}
+
+/*==================================================*/
